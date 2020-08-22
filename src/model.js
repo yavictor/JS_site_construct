@@ -1,18 +1,18 @@
 import image from './assets/image.png'
-import {Block} from './classes/blocks'
+import {TitleBlock, ImageBlock, TextColumnsBlock, TextBlock} from './classes/blocks'
 
 export const model = [
-    new Block('title', 'Site constructor on pure JS', {
+    new TitleBlock( 'Site constructor on pure JS', {
         tag: 'h1',
         styles: 'background: linear-gradient(to right, #ff0099, #493240);color: #fff;padding: 1.5rem;text-align: center;'
     }),
-    new Block('image', image,  {
+    new ImageBlock(image,  {
         alt: 'my image',
         tag: 'img',
         styles: 'padding: 2rem 0; display: flex; justify-content: center',
         imageStyles: 'width: 500px; height: auto;'
     }),
-    new Block('textColumns', [
+    new TextColumnsBlock( [
         '1 text',
         '2 text',
         '3 text',
@@ -25,7 +25,7 @@ export const model = [
         styles: 'padding: 2rem 0; display: flex; justify-content: center',
         imageStyles: 'width: 500px; height: auto;'
     } ),
-    new Block('text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut cum eveniet, libero maxime nihil numquam rem saepe velit veniam?',
+    new TextBlock('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut cum eveniet, libero maxime nihil numquam rem saepe velit veniam?',
         {
             tag: 'p',
             styles: 'background: linear-gradient(to left, #f2994a, #f2c94c);font-weight: bold;padding: 1rem;'
