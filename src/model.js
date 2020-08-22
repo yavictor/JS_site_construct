@@ -1,3 +1,5 @@
+import image from './assets/image.png'
+
 export const model = [
     {type: 'title', value: 'Test Title', options: {
         tag: 'h1',
@@ -17,7 +19,7 @@ export const model = [
         ], options: {
             styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
         }},
-    {type: 'image', alt: 'my image', src: '', options: {
+    {type: 'image', alt: 'my image', src: image, options: {
         tag: 'img',
         styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
         }}

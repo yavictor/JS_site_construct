@@ -9,7 +9,6 @@ function style(path) {
 }
 
 function title(content) {
-    console.log(content.options.tag)
     return row(columns(`<${tag(content)}>${content.value}</${tag(content)}>`), style(content))
 }
 

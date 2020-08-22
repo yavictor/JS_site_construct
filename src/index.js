@@ -2,8 +2,6 @@ import './styles/main.css'
 import {model} from "./model";
 import {templates} from "./templates";
 
-console.log(templates);
-
 const site = document.querySelector('#site')
 
 model.forEach((el) => {
