@@ -14,7 +14,7 @@ function title(content) {
 }
 
 function text(content) {
-    return row(columns(`<${tag(content)}>${content.value}</${tag(content)}>`), style(content))
+    return row(columns(`<${tag(content)} style="margin-bottom: 0;">${content.value}</${tag(content)}>`), style(content))
 }
 
 function textColumns(content) {
