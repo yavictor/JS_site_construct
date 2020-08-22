@@ -21,8 +21,15 @@ function textColumns(content) {
     return row(htmlFromArray.join(''), style(content));
 }
 
+function image(content) {
+    const {alt, styles, imageStyles} = content.options;
+    const html = `<img src="${content.src}" alt="${alt}" style="${imageStyles}">`
+    return row(html, styles)
+}
+
 export const templates = {
     title,
     text,
-    textColumns
+    textColumns,
+    image
 }

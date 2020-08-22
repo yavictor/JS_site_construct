@@ -19,8 +19,10 @@ export const model = [
         ], options: {
             styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
         }},
-    {type: 'image', alt: 'my image', src: image, options: {
-        tag: 'img',
-        styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
+    {type: 'image', src: image, options: {
+            alt: 'my image',
+            tag: 'img',
+            styles: 'padding: 2rem 0; display: flex; justify-content: center',
+            imageStyles: 'width: 500px; height: auto;'
         }}
 ]
