@@ -12,6 +12,12 @@ function title(content) {
     return row(columns(`<${tag(content)}>${content.value}</${tag(content)}>`), style(content))
 }
 
+function image(content) {
+    const {alt, styles, imageStyles} = content.options;
+    const html = `<img src="${content.value}" alt="${alt}" style="${imageStyles}">`
+    return row(html, styles)
+}
+
 function text(content) {
     return row(columns(`<${tag(content)} style="margin-bottom: 0;">${content.value}</${tag(content)}>`), style(content))
 }
@@ -19,12 +25,6 @@ function text(content) {
 function textColumns(content) {
     const htmlFromArray = content.value.map((item) => columns(item));
     return row(htmlFromArray.join(''), style(content));
-}
-
-function image(content) {
-    const {alt, styles, imageStyles} = content.options;
-    const html = `<img src="${content.src}" alt="${alt}" style="${imageStyles}">`
-    return row(html, styles)
 }
 
 export const templates = {
