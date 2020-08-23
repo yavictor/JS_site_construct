@@ -50,7 +50,7 @@ export class TextBlock extends Block{
     }
 
     toHTML() {
-        const {tag, value, styles} = this.options
-        return row(columns(`<${tag} style="margin-bottom: 0;">${value}</${tag}>`), styles)
+        const {tag, styles} = this.options
+        return row(columns(`<${tag} style="margin-bottom: 0;">${this.value}</${tag}>`), styles)
     }
 }

@@ -9,7 +9,8 @@ function style(path) {
 }
 
 function title(content) {
-    return row(columns(`<${tag(content)}>${content.value}</${tag(content)}>`), style(content))
+    const {tag, styles} = content.options;
+    return row(columns(`<${tag}>${content.value}</${tag}>`), styles)
 }
 
 function image(content) {
@@ -19,7 +20,7 @@ function image(content) {
 }
 
 function text(content) {
-    return row(columns(`<${tag(content)} style="margin-bottom: 0;">${content.value}</${tag(content)}>`), style(content))
+    return row(columns(`<${content)} style="margin-bottom: 0;">${content.value}</${tag(content)}>`), style(content))
 }
 
 function textColumns(content) {

@@ -1,9 +1,10 @@
 import './styles/main.css'
 import {model} from "./model";
+import {Site} from './classes/site'
 
-const site = document.querySelector('#site')
+const site = new Site('#site')
 
-model.forEach((el) => site.insertAdjacentHTML('beforeend', el.toHTML()));
+site.render(model)
 
 
 
